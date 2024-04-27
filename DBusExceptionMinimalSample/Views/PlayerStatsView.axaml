@@ -4,5 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="DBusExceptionMinimalSample.Views.PlayerStatsView">
-    Welcome to Avalonia!
+            <Grid RowDefinitions="Auto, Auto,Auto, Auto, Auto, Auto, Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="Descriptions" />
+                    <ColumnDefinition Width="15" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="TestValue:" FontWeight="SemiBold" />
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding TestString}" />
+            </Grid>
 </UserControl>
